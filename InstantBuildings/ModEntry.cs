@@ -27,7 +27,7 @@ namespace BitwiseJonMods
 
         private void Input_ButtonPressed(object sender, ButtonPressedEventArgs e)
         {
-            if ((e.Button == _config.ToggleInstantBuildMenuButton || e.Button == _config.PerformInstantHouseUpgradeButton) && Game1.currentLocation is Farm)
+            if ((e.Button == _config.ToggleInstantBuildMenuButton || e.Button == _config.PerformInstantHouseUpgradeButton) && (Game1.currentLocation is Farm || Game1.currentLocation.Name == "Custom_GrampletonFields"))
             {
                 if (e.Button == _config.ToggleInstantBuildMenuButton)
                 {
